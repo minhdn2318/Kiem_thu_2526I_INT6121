@@ -1,0 +1,71 @@
+# HỆ THỐNG KIỂM THỬ KHỚP LỆNH CHỨNG KHOÁN (STOCK MATCHING SYSTEM)
+
+---
+
+## 🧾 1. PHÁT BIỂU BÀI TOÁN
+
+Hệ thống mô phỏng quá trình **khớp lệnh chứng khoán** trên sàn giao dịch.  
+Các nhà đầu tư có thể **đặt lệnh mua hoặc bán cổ phiếu**, và hệ thống sẽ **tự động khớp lệnh** dựa trên **giá và thời gian**.
+
+### Các thành phần chính
+
+| Thành phần | Mô tả |
+|-------------|-------|
+| **Investor (Nhà đầu tư)** | Có thể đặt lệnh mua hoặc bán cổ phiếu. |
+| **Order (Lệnh giao dịch)** | Chứa thông tin: loại lệnh (mua/bán), mã cổ phiếu, giá, khối lượng. |
+| **OrderBook (Sổ lệnh)** | Lưu các lệnh chờ khớp (mua/bán). |
+| **MatchingEngine (Bộ khớp lệnh)** | Tự động tìm cặp lệnh mua-bán có thể khớp. |
+| **Trade (Giao dịch)** | Tạo ra sau khi khớp thành công. |
+| **Account (Tài khoản)** | Quản lý tiền mặt và cổ phiếu của nhà đầu tư. |
+
+---
+
+## 2. ĐẶC TẢ CHỨC NĂNG (USE CASE)
+
+| Mã Use Case | Tên Use Case | Mô tả | Đầu vào chính | Đầu ra |
+|--------------|---------------|--------|----------------|---------|
+| **UC-01** | Đặt lệnh mua | Nhà đầu tư đặt lệnh mua cổ phiếu | Mã cổ phiếu, Giá, Khối lượng | Lệnh được lưu trong sổ lệnh |
+| **UC-02** | Đặt lệnh bán | Nhà đầu tư đặt lệnh bán cổ phiếu | Mã cổ phiếu, Giá, Khối lượng | Lệnh được lưu trong sổ lệnh |
+| **UC-03** | Khớp lệnh | Hệ thống khớp lệnh tự động theo quy tắc | Các lệnh mua & bán | Giao dịch khớp thành công |
+| **UC-04** | Xem sổ lệnh | Nhà đầu tư xem danh sách các lệnh chờ | Tài khoản nhà đầu tư | Danh sách lệnh |
+| **UC-05** | Xem lịch sử giao dịch | Nhà đầu tư xem lịch sử khớp lệnh | Tài khoản nhà đầu tư | Danh sách giao dịch đã khớp |
+
+---
+
+## 3. PHÂN TÍCH TEST CASE (EP + BVA)
+
+### Use Case: UC-01 – Đặt lệnh mua
+
+**Đầu vào:**  
+- Mã cổ phiếu: `VN30`, `FPT`, `VIC`, …  
+- Giá: `10,000 – 100,000` VNĐ  
+- Khối lượng: `100 – 1,000,000` cổ phiếu  
+
+**Phương pháp:**
+- **Phân hoạch tương đương (EP):** chia giá trị hợp lệ và không hợp lệ.  
+- **Giá trị biên (BVA):** kiểm thử tại ngưỡng giới hạn.
+
+| ID | Thuộc tính | Loại kiểm thử | Dữ liệu kiểm thử | Kết quả mong đợi |
+|----|-------------|----------------|------------------|------------------|
+| TC01 | Giá | Hợp lệ (EP) | 50,000 | Lệnh hợp lệ |
+| TC02 | Giá | Thấp hơn min (BVA) | 9,999 | Lệnh bị từ chối |
+| TC03 | Giá | Tại min (BVA) | 10,000 | Lệnh hợp lệ |
+| TC04 | Giá | Tại max (BVA) | 100,000 | Lệnh hợp lệ |
+| TC05 | Giá | Lớn hơn max (BVA) | 100,001 | Lệnh bị từ chối |
+| TC06 | Khối lượng | Hợp lệ (EP) | 500,000 | Lệnh hợp lệ |
+| TC07 | Khối lượng | Nhỏ hơn min (BVA) | 99 | Lệnh bị từ chối |
+| TC08 | Khối lượng | Lớn hơn max (BVA) | 1,000,001 | Lệnh bị từ chối |
+
+---
+
+## 4. CẤU TRÚC THƯ MỤC DỰ ÁN
+
+```bash
+📁 stock-matching-test/
+│
+├── order.py                     # Logic xử lý lệnh mua/bán
+├── test_buy_order.py            # Test EP + BVA cho lệnh mua
+├── test_sell_order.py           # Test EP + BVA cho lệnh bán
+├── requirements.txt             # Thư viện cần cài
+├── README.md                    # Hướng dẫn chi tiết (file này)
+└── TÀI LIỆU SRS-kiem thu phan mem chung khoan.docx
