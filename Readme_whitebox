@@ -1,0 +1,102 @@
+# Kiểm thử hộp đen – Bài tập chứng khoán
+
+## 1. Mục tiêu
+Bài tập này nhằm thực hiện **kiểm thử hộp đen** cho các hàm đặt lệnh trong `order.py` (buy/sell), với các mục tiêu:
+
+- Sinh tự động các **testcase đầu vào**.
+- Đảm bảo đạt các **độ phủ cơ bản**:
+  - **Phủ lệnh** (Statement coverage)
+  - **Phủ nhánh** (Branch coverage)
+  - **Phủ đường** (Path coverage)
+- Sử dụng **Z3 SMT solver** để tạo dữ liệu hợp lệ cho từng path.
+
+---
+
+## 2. Cấu trúc thư mục
+
+```
+.
+├── CFG.png                 # Ảnh Control Flow Graph (CFG)
+├── Readme                  # File README
+├── auto_testgen_z3.py      # Sinh input testcase tự động bằng Z3
+├── cfg_dot.py              # Sinh file .dot từ code order.py
+├── dfs_from_dot.py         # Tìm tất cả test path từ file .dot
+├── coverage_calc.py        # Lọc test path theo 3 độ đo (phủ lệnh, nhánh, đường)
+├── coverage_runtime.py     # Tính testcase thực chạy chưa đạt 100% coverage
+├── order.py                # Code gốc các hàm đặt lệnh (buy/sell)
+├── order_mini.dot          # File CFG dạng DOT
+├── requirements.txt        # Thư viện Python cần thiết
+├── test_buy_order.py       # Test script cho place_buy_order
+├── test_sell_order.py      # Test script cho place_sell_order
+├── test_paths.txt          # Output các path từ DFS
+├── testcases_vn.csv        # Testcase sinh tự động bằng Z3
+└── __pycache__/            # Cache Python
+```
+
+---
+
+## 3. Quy trình kiểm thử
+
+### Bước 1: Tạo CFG
+- Chạy `cfg_dot.py` để phân tích `order.py` và sinh **file DOT** `order_mini.dot`.
+- Xuất ra **ảnh CFG** (`CFG.png`) để trực quan hóa luồng chương trình từ tool online: http://www.webgraphviz.com/
+
+```bash
+python cfg_dot.py
+```
+
+### Bước 2: Tìm tất cả Test Path
+- Chạy `dfs_from_dot.py` để quét tất cả đường đi từ `start` đến `return` trong CFG.
+- Kết quả lưu vào `test_paths.txt`.
+
+```bash
+python dfs_from_dot.py
+```
+
+### Bước 3: Lọc Test Path theo độ phủ
+- Sử dụng `coverage_calc.py` để tính các **độ phủ**:
+  - **Phủ lệnh** (Statement coverage)
+  - **Phủ nhánh** (Branch coverage)
+  - **Phủ đường** (Path coverage)
+- Sử dụng `coverage_runtime.py` để xác định các testcase chạy thực tế **chưa đạt 100% coverage**.
+
+```bash
+python coverage_calc.py
+python coverage_runtime.py
+```
+
+### Bước 4: Sinh input tự động bằng Z3
+- Dựa vào các test path trong `test_paths.txt`, chạy `auto_testgen_z3.py` để tạo **testcase hợp lệ**.
+- Kết quả được lưu vào `testcases_vn.csv`, gồm các cột:
+  - `path_idx` – số thứ tự path
+  - `path` – đường đi trong CFG
+  - `symbol` – mã chứng khoán
+  - `price` – giá đặt lệnh
+  - `volume` – khối lượng đặt lệnh
+
+```bash
+python auto_testgen_z3.py
+```
+
+---
+
+## 4. Yêu cầu môi trường
+- Python >= 3.10
+- Thư viện cần thiết trong `requirements.txt`, ví dụ:
+  ```
+  z3-solver
+  pandas
+  graphviz
+  ```
+- Cài đặt:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 5. Ghi chú
+- Nếu file `testcases_vn.csv` đang mở trong Excel, Python sẽ không ghi đè được (PermissionError). Đóng file trước khi chạy script.
+- CFG và DOT chỉ phân tích **cấu trúc điều kiện trong code**, không chạy code thực.
+- Quy trình này mô phỏng **kiểm thử hộp đen dựa trên CFG** và sử dụng Z3 để sinh dữ liệu đầu vào đầy đủ các nhánh.
