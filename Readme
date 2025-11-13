@@ -61,11 +61,116 @@ Các nhà đầu tư có thể **đặt lệnh mua hoặc bán cổ phiếu**, v
 ## 4. CẤU TRÚC THƯ MỤC DỰ ÁN
 
 ```bash
-📁 stock-matching-test/
+📁 Kiem_thu_2526I_INT6121/
 │
-├── order.py                     # Logic xử lý lệnh mua/bán
-├── test_buy_order.py            # Test EP + BVA cho lệnh mua
-├── test_sell_order.py           # Test EP + BVA cho lệnh bán
-├── requirements.txt             # Thư viện cần cài
-├── README.md                    # Hướng dẫn chi tiết (file này)
-└── TÀI LIỆU SRS-kiem thu phan mem chung khoan.docx
+├── CFG.png                     # Ảnh Control Flow Graph (CFG)
+├── Readme                      # File README
+├── auto_testgen_z3.py          # Sinh input testcase tự động bằng Z3
+├── cfg_dot.py                  # Sinh file .dot từ code order.py
+├── dfs_from_dot.py             # Tìm tất cả test path từ file .dot
+├── coverage_calc.py            # Lọc test path theo 3 độ đo (phủ lệnh, nhánh, đường)
+├── coverage_runtime.py         # Tính testcase thực chạy chưa đạt 100% coverage
+├── order.py                    # Logic xử lý lệnh mua/bán
+├── order_mini.dot              # File CFG dạng DOT
+├── requirements.txt            # Thư viện Python cần cài
+├── test_buy_order.py           # Test EP + BVA cho lệnh mua
+├── test_sell_order.py          # Test EP + BVA cho lệnh bán
+├── test_paths.txt              # Output các path từ DFS
+├── testcases_vn.csv            # Testcase sinh tự động bằng Z3
+├── __pycache__/                # Cache Python
+└── 'SRS-kiem thu phan mem chung khoan.docx'  # Tài liệu SRS gốc
+```
+
+## 5. KIỂM THỬ HỘP ĐEN (BLACK-BOX TESTING)
+
+Mục tiêu: kiểm thử dựa trên **đầu vào và đầu ra** mà không quan tâm tới logic bên trong hàm.
+
+### 5.1 Phương pháp
+
+- **Phân hoạch tương đương (EP – Equivalence Partitioning):** chia dữ liệu đầu vào thành các lớp hợp lệ và không hợp lệ.
+- **Giá trị biên (BVA – Boundary Value Analysis):** kiểm thử tại các giá trị biên của các tham số.
+
+### 5.2 Ví dụ testcase cho hàm `place_sell_order`
+
+```python
+import pytest
+from order import place_sell_order
+
+@pytest.mark.parametrize("symbol, price, volume, expected", [
+    # --- EP: Valid Partition ---
+    ("FPT", 95000, 10, {"status": "success"}),
+
+    # --- EP: Invalid Partition ---
+    ("", 95000, 10, {"status": "error", "msg": "Mã cổ phiếu không hợp lệ"}),
+    ("FPT", -95000, 10, {"status": "error", "msg": "Giá phải > 0"}),
+    ("FPT", 95000, 0, {"status": "error", "msg": "Khối lượng phải > 0"}),
+
+    # --- BVA: Boundary Test ---
+    ("FPT", 1, 1, {"status": "success"}),
+    ("FPT", 1_000_000, 1_000_000, {"status": "success"}),
+    ("FPT", 0, 100, {"status": "error", "msg": "Giá phải > 0"}),
+    ("FPT", 50000, -1, {"status": "error", "msg": "Khối lượng phải > 0"}),
+])
+def test_place_sell_order(symbol, price, volume, expected):
+    """Kiểm thử các trường hợp ĐẶT LỆNH BÁN"""
+    result = place_sell_order(symbol, price, volume)
+    assert result["status"] == expected["status"]
+    if result["status"] == "error":
+        assert result["msg"] == expected["msg"]
+```
+
+### 5.3 Quy trình kiểm thử hộp đen
+
+1. Xác định **hàm cần test** (ví dụ: `place_buy_order`, `place_sell_order`).  
+2. Xác định **phạm vi đầu vào hợp lệ và không hợp lệ**.  
+3. Sinh các testcase theo **EP + BVA**.  
+4. Dùng **pytest** để chạy testcase.  
+5. Kiểm tra **kết quả đầu ra** có đúng với mong đợi hay không.  
+
+
+## 6. KIỂM THỬ HỘP TRẮNG (WHITE-BOX TESTING)
+
+Mục tiêu: kiểm thử dựa trên **logic bên trong code**, đảm bảo **mọi nhánh, câu lệnh và đường đi** đều được thực thi.
+
+### 6.1 Phương pháp
+
+- **Phủ lệnh (Statement coverage):** mọi câu lệnh trong code phải được thực thi ít nhất một lần.  
+- **Phủ nhánh (Branch coverage):** mọi nhánh `if/else` đều phải được kiểm thử.  
+- **Phủ đường (Path coverage):** mọi đường đi từ đầu đến cuối hàm đều phải được kiểm thử.
+
+### 6.2 Quy trình kiểm thử hộp trắng
+
+1. **Sinh CFG (Control Flow Graph):**  
+```bash
+python cfg_dot.py
+```
+   - Output: `order_mini.dot`  
+   - Sử dụng Graphviz để tạo ảnh CFG: `CFG.png`
+
+2. **Tìm tất cả test path bằng DFS/BFS:**  
+```bash
+python dfs_from_dot.py
+```
+   - Output: `test_paths.txt`
+
+3. **Lọc test path theo độ phủ (statement, branch, path):**  
+```bash
+python coverage_calc.py
+```
+
+4. **Chạy testcase thực tế và đánh giá coverage:**  
+```bash
+python coverage_runtime.py
+```
+
+5. **Tự sinh input hợp lệ cho từng path bằng Z3:**  
+```bash
+python auto_testgen_z3.py
+```
+   - Output: `testcases_vn.csv` chứa các testcase hợp lệ theo từng path.
+
+### 6.3 Lợi ích
+
+- Đảm bảo **tất cả câu lệnh và nhánh trong code được kiểm thử**.  
+- Phát hiện **lỗi logic tiềm ẩn** mà kiểm thử hộp đen có thể bỏ sót.  
+- Kết hợp với Z3 giúp **tự động sinh input cho mọi path**, tăng độ bao phủ và giảm thao tác thủ công.
