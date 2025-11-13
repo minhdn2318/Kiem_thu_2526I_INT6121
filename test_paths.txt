@@ -1,0 +1,188 @@
+Path 1: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> return
+Path 2: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 3: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 4: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 5: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 6: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 7: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 8: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 9: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 10: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 11: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 12: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 13: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 14: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 15: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 16: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 17: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 18: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 19: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 20: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 21: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 22: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 23: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 24: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 25: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 26: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 27: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 28: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 29: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 30: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 31: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 32: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 33: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 34: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 35: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 36: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 37: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 38: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 39: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 40: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 41: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 42: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 43: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 44: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 45: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 46: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 47: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 48: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> return
+Path 49: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 50: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 51: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 52: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 53: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 54: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 55: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 56: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 57: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 58: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 59: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 60: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 61: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 62: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 63: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 64: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 65: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 66: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 67: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 68: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 69: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 70: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 71: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 72: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 73: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 74: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 75: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 76: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 77: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 78: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 79: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 80: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 81: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 82: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 83: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 84: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 85: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 86: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 87: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 88: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 89: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 90: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 91: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 92: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 93: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 94: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 95: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> return
+Path 96: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 97: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 98: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 99: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 100: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 101: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 102: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 103: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 104: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 105: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 106: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 107: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 108: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 109: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 110: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 111: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 112: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 113: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 114: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 115: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 116: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 117: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 118: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 119: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 120: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 121: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 122: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 123: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 124: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 125: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 126: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 127: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 128: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 129: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 130: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 131: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 132: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 133: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 134: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 135: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 136: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 137: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 138: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 139: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 140: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 141: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 142: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> return
+Path 143: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 144: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 145: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 146: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 147: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 148: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 149: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 150: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 151: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 152: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 153: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 154: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 155: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 156: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 157: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 158: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 159: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 160: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 161: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 162: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 163: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 164: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 165: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 166: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> return
+Path 167: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 168: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 169: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 170: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 171: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 172: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 173: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 174: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 175: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 176: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 177: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 178: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> return
+Path 179: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 180: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 181: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 182: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 183: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 184: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> return
+Path 185: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 186: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 187: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
+Path 188: start -> def place_buy_order -> Expr -> if not symbol or not isinstance(symbol, str) -> if price <= 0 -> if volume <= 0 -> if price > 1000000 -> if volume > 1000000 -> return
